@@ -1,5 +1,4 @@
-
-using EmployeesAPI.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmployeesAPI
 {
@@ -16,6 +15,11 @@ namespace EmployeesAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<DepartmentLookup>();
+            
+            builder.Services.AddDbContext<EmployeeDataContext>(options =>
+            {
+                options.UseSqlServer("connection string here");
+            });
 
             var app = builder.Build();
 

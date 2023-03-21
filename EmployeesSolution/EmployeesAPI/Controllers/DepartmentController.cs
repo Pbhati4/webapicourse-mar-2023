@@ -1,5 +1,4 @@
 ﻿using EmployeesApi.Models;
-using EmployeesAPI.Domain;
 
 namespace EmployeesAPI.Controllers;
 
