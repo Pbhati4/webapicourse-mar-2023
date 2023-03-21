@@ -4,9 +4,9 @@ namespace EmployeesAPI.Controllers;
 
 public class DepartmentController : ControllerBase
 {
-    private readonly DepartmentLookup _departmentLookup;
+    private readonly IDepartmentLookup _departmentLookup;
 
-    public DepartmentController(DepartmentLookup departmentLookup)
+    public DepartmentController(IDepartmentLookup departmentLookup)
     {
         _departmentLookup = departmentLookup;
     }
